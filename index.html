@@ -1,12 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Search</title>
+    <meta charset="UTF-8">
+    <title>Google Search</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="https://www.google.com/search">
-        <input type="text" name="q">
-        <input type="submit" value="Google Search">
-    </form>
+   
+    <section>
+        <header>
+            <ul>
+                <li><a href="./googleimage.html">Images</a></li>
+                <li><a href="./advancesearch.html">Advance Search</a></li>
+                <li><a href="#"><img src="bars.png"></a></li>
+                <li><button>Sign In</button></li>
+            </ul>
+        </header>
+        <div class="main">
+            <img src="google.png">
+            <div class="searchBox">
+                <input type="text" name="" class="query" value="">
+                <div class="icons">
+                    <div><img src=" search.png"></div>
+                    <div><img src="mic.png"></div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="searchBtn">Google Search</button>
+                <button class="imflBtn">I'm Feeling Lucky</button>
+            <div class="lang">
+                Google offered in:
+                <a href="#">norsk</a>
+            </div>
+            </div>
+
+
+            </div>
+        
+                <div class="footer">
+                    <div class="row row1">
+                        <p class="country">Norway</p>
+                    </div>
+                            <div class="row row2">
+                                <ul>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Advertising</a></li>
+                                    <li><a href="#">Business</a></li>
+                                    <li><a href="#">How Search works</a></li>
+                                </ul>
+                            
+                                <ul>
+                                    <li><a href="#">Privacy</a></li>
+                                    <li><a href="#">Terms</a></li>
+                                    <li><a href="#">Settings</a></li>
+                                </ul>
+                            </div>
+                </div>
+        </div>      
+    
+    </section>
+    <script>
+        let query = document.querySelector('.query');
+        let searchBtn = document.querySelector('.searchBtn');
+
+        searchBtn.onclick = function(){
+            let url = 'https://www.google.com/search?q='+query.value;
+            window.open(url);
+        
+        }
+    </script>
 </body>
 </html>
